@@ -186,4 +186,11 @@ public class MainService extends Service {
             }
         }
     };
+
+    @Override
+    public void onDestroy() {
+        btnView.setVisibility(View.GONE);
+        stopSelf();
+        super.onDestroy();
+    }
 }
